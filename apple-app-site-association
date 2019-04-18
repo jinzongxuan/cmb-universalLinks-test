@@ -1,25 +1,11 @@
 {
-	"applinks": {
-		"apps": [],
-		"details": {
-			"8J52SRPW6X.com.zhihu.ios": {
-				"paths": ["*"]
-			},
-			"886PYH8YW5.com.zhihu.ios": {
-				"paths": ["*"]
-			},
-			"B6MTNRMU2Y.com.zhihu.ios": {
-				"paths": ["*"]
-			},
-			"B6MTNRMU2Y.com.zhihu.ios-dev": {
-				"paths": ["*"]
-			}
-		}
-	},
-	"webcredentials": {
-		"apps": ["8J52SRPW6X.com.zhihu.ios", "886PYH8YW5.com.zhihu.ios", "B6MTNRMU2Y.com.zhihu.ios", "B6MTNRMU2Y.com.zhihu.ios-dev"]
-	},
-	"activitycontinuation": {
-		"apps": ["8J52SRPW6X.com.zhihu.ios", "886PYH8YW5.com.zhihu.ios", "B6MTNRMU2Y.com.zhihu.ios", "B6MTNRMU2Y.com.zhihu.ios-dev"]
-	}
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "H525Q4663M.com.cmbchina.cmf.fxbase.dev",
+                "paths": [ "/cmb-universalLinks-test/"]
+            }
+        ]
+    }
 }
