@@ -4,7 +4,7 @@
         "details": [
             {
                 "appID": "H525Q4663M.com.cmbchina.cmf.fxbase.dev",
-                "paths": [ "/cmb-universalLinks-test/"]
+                "paths": [ "*"]
             }
         ]
     }

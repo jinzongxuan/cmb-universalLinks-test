@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.cmbchina.cmf",
+    "sha256_cert_fingerprints":
+    ["AD:BF:9B:9D:32:0D:AE:37:F0:14:43:1B:97:1A:66:DD:F3:64:C9:B4:67:14:53:41:36:46:D4:92:95:62:21:62"]
+  }
+}]
