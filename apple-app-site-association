@@ -5,8 +5,11 @@
             {
                 "appID": "H525Q4663M.com.cmbchina.cmf.fxbase.dev",
                 "paths": [ "*"]
+            },
+            {
+                "appID": "U653R7WNB4.com.cmbchina.cmf.fxbase",
+                "paths": [ "*"]
             }
         ]
     }
 }
-
