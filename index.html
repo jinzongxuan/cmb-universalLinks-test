@@ -11,36 +11,40 @@
     <a href="tel:12306">测试拨打电话12306</a> 
 </head>
 <body>
-        <script>
+    <script>
 
-                function checkpost() {
-                    if(document.forms[5].name.value=="test"&&document.forms[5].pw.value=="123") {
-                        alert("1")
-                        //window.location="跳转的地址";
-                    } else {
-                        alert("2")
-                        //return false;
+            function checkpost() {
+                if(document.forms[5].name.value=="test"&&document.forms[5].pw.value=="123") {
+                    alert("1")
+                    //window.location="跳转的地址";
+                } else {
+                    alert("2")
+                    //return false;
+                }
+            }
+        
+            function focusKeyboard() {
+                alert("1");
+                var input=document.getElementByIdx_x("input");
+                input.value="";
+                input.style.color="black";
+                window.cmf
+                .trigger(`http://cmf/secureKeyboard`, {
+                    type: 'password',
+                    colorStyle: 'dark'
+                })
+                .then(
+                    result => {
+                        this.keyboardValue = result.data;
+                    },
+                    error => {
+                        this.keyboardValue = JSON.stringify(error);
                     }
-                }
-            
-                function focusKeyboard() {
-                    window.cmf
-                    .trigger(`http://cmf/secureKeyboard`, {
-                        type: 'password',
-                        colorStyle: 'dark'
-                    })
-                    .then(
-                        result => {
-                            this.keyboardValue = result.data;
-                        },
-                        error => {
-                            this.keyboardValue = JSON.stringify(error);
-                        }
-                    );
-                }
-            
-            </script>
-            
+                );
+            }
+        
+        </script>
+
     <div id="main-content">test for universalLinks
     <a href="https://3z3.jiaochifan.com">https://3z3.jiaochifan.com</a>
     <a href="https://cmb.jijufurniture.com">https://cmb.jijufurniture.com</a>
