@@ -23,6 +23,10 @@
                 }
             }
         
+            function setStyle(x)
+            {
+            document.getElementById(x).style.background="yellow";
+            }
             function focusKeyboard() {
                 alert("1");
                 var input=document.getElementByIdx_x("input");
@@ -58,6 +62,7 @@
         <br />
         <input type="submit" value="提交" />
     </form>
+    <input type="text" id="fname" onfocus="setStyle(this.id)"><br>
 
 </body>
 </html>
