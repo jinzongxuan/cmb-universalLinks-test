@@ -46,10 +46,10 @@
     </div>
     <form method="post" action="***" name="form" onsubmit="checkpost()">
         <label for="name">用户名：</label>
-        <input type="text" name="name" id="name" />
+        <input type="text" autocomplete="username" name="name" id="name" />
         <br />
         <label for="pw">密码：</label>
-        <input type="password" placeholder="安全键盘" onfocus="focusKeyboard()" name="keyboardValue">
+        <input type="password" autocomplete="current-password" placeholder="安全键盘" onfocus="focusKeyboard()" name="keyboardValue">
         <br />
         <input type="submit" value="提交" />
     </form>
