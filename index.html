@@ -28,19 +28,14 @@
             document.getElementById(x).style.background="yellow";
             }
             function focusKeyboard() {
-                window.cmf
-                .trigger(`http://cmf/secureKeyboard`, {
+                window.cmf.trigger('http://cmf/secureKeyboard', {
                     type: 'password',
                     colorStyle: 'dark'
-                })
-                .then(
-                    result => {
-                        this.keyboardValue = result.data;
-                    },
-                    error => {
-                        this.keyboardValue = JSON.stringify(error);
-                    }
-                );
+                }).then(function (result) {
+                    this.response = JSON.stringify(result);
+                    }, function (error) {
+                    this.response = JSON.stringify(result);
+                });
             }
         
         </script>
