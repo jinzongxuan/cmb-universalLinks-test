@@ -20,7 +20,7 @@
         <input type="text" name="name" id="name" />
         <br />
         <label for="pw">密码：</label>
-        <input type="password" placeholder="安全键盘" (focus)="focusKeyboard()" name="keyboardValue">
+        <input type="password" placeholder="安全键盘" onfocus ="focusKeyboard()" name="keyboardValue">
         <br />
         <input type="submit" value="提交" />
     </form>
@@ -38,12 +38,6 @@
             //return false;
         }
     }
-
-    const password = document.querySelector('input[type="password"]');
-    password.addEventListener('focus', (event) => {
-    // ……
-        focusKeyboard() 
-}   );
 
     function focusKeyboard() {
         window.cmf
