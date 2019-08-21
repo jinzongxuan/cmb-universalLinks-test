@@ -15,5 +15,29 @@
     <a href="https://3z3.jiaochifan.com">https://3z3.jiaochifan.com</a>
     <a href="https://cmb.jijufurniture.com">https://cmb.jijufurniture.com</a>
     </div>
+    <form method="post" action="***" name="form" onsubmit="checkpost()">
+        <label for="name">用户名：</label>
+        <input type="text" name="name" id="name" />
+        <br />
+        <label for="pw">密码：</label>
+        <input type="password" name="pw" id="pw" />
+        <br />
+        <input type="submit" value="提交" />
+    </form>
+
 </body>
+
+<script>
+
+    function checkpost() {
+        if(document.forms[5].name.value=="test"&&document.forms[5].pw.value=="123") {
+            alert("1")
+            //window.location="跳转的地址";
+        } else {
+            alert("2")
+            //return false;
+        }
+    }
+</script>
+
 </html>
