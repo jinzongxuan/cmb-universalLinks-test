@@ -37,7 +37,11 @@
                     this.response = JSON.stringify(result);
                 });
             }
-        
+            function showCookie()
+            {
+                document.cookie = "user=test";
+                alert(document.cookie);
+            }
         </script>
 
     <div id="main-content">test for universalLinks
@@ -56,6 +60,7 @@
     </form>
     <input type="text" id="fname" onfocus="setStyle(this.id)"><br>
 
+    <button onclick="showCookie()">显示Cookie</button>
 </body>
 <script src="cmf-bridge.umd.js"></script>
 </html>
