@@ -42,6 +42,59 @@
                 document.cookie = "user=test";
                 alert(document.cookie);
             }
+
+            function getSignatureInfo() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "http://cmf-bff.paasst.cmbchina.cn/signature", true);
+                // if (this.bffEnvi == 0) {
+                //     xhr.open("POST", "http://cmf-bff.paas.cmbchina.cn/signature", true);
+                // } else if (this.bffEnvi == 1) {
+                //     xhr.open("POST", "http://cmf-bff.paasst.cmbchina.cn/signature", true);
+                // } else if (this.bffEnvi == 2) {
+                //     xhr.open("POST", "http://cmf-bff.paasuat.cmbchina.cn/signature", true);
+                // } 
+                xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+                xhr.setRequestHeader("Content-type", "application/json");
+                xhr.setRequestHeader("systemId", "CPLMI001");
+                xhr.onreadystatechange = function() {
+                    
+                    var XMLHttpReq = xhr;
+                    /**
+                         XMLHttpReq.readyState
+                        0: 请求未初始化
+                        1: 服务器连接已建立
+                        2: 请求已接收
+                        3: 请求处理中
+                        4: 请求已完成，且响应已就绪
+                    **/
+                    if (XMLHttpReq.readyState == 4) {
+                        if (XMLHttpReq.status == 200) {                
+                            var data = XMLHttpReq.responseText;
+                            alert(data)
+                            console.log(data);
+                            var json = JSON.parse(JSON.parse(data));
+                        }else if(XMLHttpReq.status == 100){
+                        
+                        }else if(XMLHttpReq.status == 300){
+                        
+                        }else if(XMLHttpReq.status == 400){
+                        
+                        }else if(XMLHttpReq.status == 500){
+                        
+                        }else if(XMLHttpReq.status == 0){
+                            /** 0不是http协议的状态,关于XMLHttpReq.status的说明:
+                             1、If the state is UNSENT or OPENED, return 0.（如果状态是UNSENT或者OPENED，返回0）
+                            2、If the error flag is set, return 0.（如果错误标签被设置，返回0）
+                            3、Return the HTTP status code.（返回HTTP状态码）
+                            第一种情况,例如:url请求的是本地文件,状态会是0
+                            第二种情况经常出现在跨域请求中,比如url不是本身网站IP或域名,例如请求www.baidu.com时
+                            第三种,正常请求本站http协议信息时,正常返回http协议状态值
+                            **/
+                        }
+                    }
+                };
+                xhr.send();
+            }
         </script>
 
     <div id="main-content">test for universalLinks
@@ -61,6 +114,7 @@
     <input type="text" id="fname" onfocus="setStyle(this.id)"><br>
 
     <button onclick="showCookie()">显示Cookie</button>
+    <button onclick="getSignatureInfo()">获取</button>
 </body>
 <script src="cmf-bridge.umd.js"></script>
 </html>
