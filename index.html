@@ -95,6 +95,12 @@
                 };
                 xhr.send();
             }
+
+            $('.cdSearch-frame').bind('focus',function(){
+                $("#cdTrade_title_wrap").css('position','static')
+            }).bind('blur',function(){
+                $("#cdTrade_title_wrap").css({'position':'fixed','top':'0'});
+            })
         </script>
 
     <div id="main-content">test for universalLinks
@@ -115,6 +121,9 @@
 
     <button onclick="showCookie()">显示Cookie</button>
     <button onclick="getSignatureInfo()">获取</button>
+    <div class="cdSearch-content">	
+        <input data-component="SearchInput" type="tel" class="cdSearch-frame"  data-keyboard-type="2" placeholder="请输入银行账号后6位" maxlength="6" />
+    </div>
 </body>
 <script src="cmf-bridge.umd.js"></script>
 </html>
